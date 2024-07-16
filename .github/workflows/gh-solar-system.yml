@@ -6,8 +6,10 @@ on:
 jobs:
   display:
     runs-on: ubuntu-latest
+    environment:
+      name: development
     steps:
     - name: display kubeconfig
       run: |
-        echo ${{env.KUBECONFIG}}
-        cat ${{env.KUBECONFIG}}
+        echo ${{secrets.KUBECONFIG}}
+        cat ${{secrets.KUBECONFIG}}
