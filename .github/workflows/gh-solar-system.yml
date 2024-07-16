@@ -1,0 +1,11 @@
+name: gh solar systems
+
+on:
+  push
+
+jobs:
+  display:
+    runs-on: ubuntu-latest
+    steps:
+    - name: display kubeconfig
+      runs: cat /root/.kube/config
