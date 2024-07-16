@@ -8,4 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: display kubeconfig
-      run: cat /root/.kube/config
+      run: |
+        echo ${{env.KUBECONFIG}}
+        cat ${{env.KUBECONFIG}}
